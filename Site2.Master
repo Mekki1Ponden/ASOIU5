@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="ASOIU4.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            background-color: #293939;
+            color: #FFFFFF;
+        }
+        .header {
+            font-family: Dubai;
+            font-weight: bold;
+            font-size: xx-large;
+            text-decoration: blink;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .button {
+            width: 150px;
+            padding: 10px;
+            background-color: #293939;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:hover {
+            background-color: #FFFFFF;
+            color: #0B0C0C;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div class="container">
+            <asp:Image ID="Image1" runat="server" Height="188px" Width="360px" ImageURL ="img/log.png" CssClass="header"/>
+            <asp:Label ID="Label1" runat="server" CssClass="header" Text="Театры"></asp:Label>
+            <div class="button-container">
+                <asp:LinkButton ID="LinkButton3" runat="server" CssClass="button">Редактировать новости</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CssClass="button">Добавить представление</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton2" runat="server" CssClass="button">Подтвердить запись на представление</asp:LinkButton>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+    </form>
+</body>
+</html>
+
